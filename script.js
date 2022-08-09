@@ -1,8 +1,8 @@
+// const baseurl= `https://superheroapi.com/api.php/110151828463508/id`
 
-
-const gethero = () =>{
-const baseurl= `https://superheroapi.com/api.php/10223569763528853/id`
-fetch(`https://superheroapi.com/api.php/10223569763528853/${Math.ceil(Math.random()* 731)}`)
+const button = document.getElementById(`newherobutton`)
+const getRandomHero = (id) =>{
+fetch(`https://superheroapi.com/api.php/110151828463508/${id}`)
 .then(Response => Response.json())
 .then(json =>{ 
 const img = document.getElementById('heroimage');
@@ -12,4 +12,7 @@ name.innerText = json.name
 })
 }
 
-gethero()
+button.onclick = () =>{getRandomHero(
+    Math.ceil(Math.random()* 731)
+)
+}

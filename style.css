@@ -5,6 +5,10 @@ body {
     padding: 0;
     background-color: rgb(154, 192, 79);
     font-family: fantasy;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #heroimage {
@@ -28,4 +32,25 @@ h1:hover{
     letter-spacing: 10px;
     color: rgb(61, 76, 31) ;
     font-kerning: normal;
+}
+
+#newherobutton{
+    display: block;
+    width: 20vh;
+    height: 2.5rem;
+    border: 2px dashed rgb(154, 192, 79);
+    background-color: rgb(33, 41, 17);
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bolder;
+    transition: .7s;
+    box-shadow: 0px 2px 5px black;
+}
+
+#newherobutton:hover{
+    background-color: rgb(154, 192, 79);
+    border: 2px solid rgb(33, 41, 17);
+    border-radius: 20px;
+    transform: scale(1.04);
+    color: rgb(33, 41, 17);
 }
