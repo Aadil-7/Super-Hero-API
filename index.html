@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,22 @@
     <link rel="icon" type="image/x-icon" href="./peace.png">
     <title>SuperHero</title>
 </head>
+
 <body>
+    <div class="searchcontainer">
+        <p>Search your Hero by typing name here.</p>
+        <input type="text" id="searchbar" placeholder="Type your Hero's name here">
+        <button id="searchButton">Search</button>
+    </div>
+    <p>OR generate a new random Hero by clicking the button below.</p>
     <button id="newherobutton">Random Hero</button>
+<div class="img-stats">
     <img src="./Untitled.png" alt="" width="300px" id="heroimage">
+    <!-- <div id="stats"></div> -->
+</div>
     <br>
     <h1 id="heroname">Mr Nobody</h1>
     <script src="./script.js"></script>
 </body>
+
 </html>
