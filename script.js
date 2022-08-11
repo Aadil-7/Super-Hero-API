@@ -1,5 +1,6 @@
-// const baseurl= `https://superheroapi.com/api.php/110151828463508/id`
+// BASEURL= `https://superheroapi.com/api.php/110151828463508/id`
 
+const statsDiv = document.getElementById(`stats`)
 const button = document.getElementById(`newherobutton`)
 const getRandomHero = (id) => {
     fetch(`https://superheroapi.com/api.php/110151828463508/${id}`)
@@ -9,6 +10,7 @@ const getRandomHero = (id) => {
             img.setAttribute('src', `${json.image.url}`)
             const name = document.getElementById(`heroname`)
             name.innerText = json.name
+            statsDiv.innerHTML = getStats(json);
         })
 }
 
@@ -23,7 +25,17 @@ const searchHero = (search) => {
             img.setAttribute('src', `${hero.image.url}`)
             const name = document.getElementById(`heroname`)
             name.innerText = hero.name
+            statsDiv.innerHTML = getStats(hero);
         })
+}
+
+const getStats = (char) => {
+    const statNames = Object.keys(char.powerstats)
+        .map(stat =>
+            `<p>${stat.toUpperCase()}: ${char.powerstats[stat]}.</p>`
+        )
+        .join('')
+    return statNames
 }
 
 button.onclick = () => {
