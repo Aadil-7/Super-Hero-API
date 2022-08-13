@@ -3,30 +3,31 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: rgb(154, 192, 79);
+    background-color: rgb(215, 236, 171);
     font-family: fantasy;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.randomcontainer{
+    margin: 1rem 2rem 2.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.randomcontainer{
-    margin: 1rem 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 .img-stats{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     text-align: left;
     width: auto;
-    margin: 1rem 0 0rem;
+    margin:  0;
     padding: 0 2rem 2rem;
-    background-color: rgb(133, 175, 48);
 }
 
 .img-stats p{
@@ -44,6 +45,7 @@ body {
     border-radius: 20px;
     box-shadow: 0px 5px 10px black;
     transition: .5s;
+    justify-self: center;
 }
 
 #heroimage:hover {
@@ -51,6 +53,7 @@ body {
 }
 
 #heroname {
+    font-size: 2.5rem;
     display: inline-block;
     text-transform: uppercase;
     color: rgb(154, 192, 79);
@@ -63,17 +66,16 @@ body {
     justify-self: center;
 }
 
+#heroname:hover {
+    letter-spacing: 10px;
+    color: rgb(61, 76, 31);
+}
+
 p {
     font-size: 1.2rem;
     font-family: 'Courier New', Courier, monospace;
     color: #000;
     text-shadow: 2px 2px 12px black;
-}
-
-#heroname:hover {
-    letter-spacing: 10px;
-    color: rgb(61, 76, 31);
-    font-kerning: normal;
 }
 
 #newherobutton {
@@ -82,7 +84,7 @@ p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 4px;
     width: 250px;
-    height: 2.5rem;
+    height: 2.7rem;
     border: 2px dashed rgb(154, 192, 79);
     background-color: rgb(33, 41, 17);
     color: #fff;
@@ -105,14 +107,14 @@ p {
 .searchcontainer {
     width: auto;
     height: auto;
-    margin: 1.2rem 2rem;
+    margin: 4rem 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 #searchbar {
-    height: 2.4rem;
+    height: 2.7rem;
     width: 250px;
     box-sizing: border-box;
     border: 1px solid black;
@@ -121,7 +123,6 @@ p {
     color: black;
     box-shadow: 0px 2px 5px black;
     text-align: center;
-    cursor: pointer;
     justify-self: center;
 }
 
@@ -134,8 +135,8 @@ p {
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 4px;
-    margin: .3rem;
-    height: 2.4rem;
+    margin: .3rem 0;
+    height: 2.7rem;
     width: 250px;
     background-color: rgb(33, 41, 17);
     color: #fff;
@@ -151,7 +152,8 @@ p {
     background-color: rgb(60, 75, 32);
 }
 
-@media (max-width : 570px) {
+@media (max-width : 620px) {
+    
     .img-stats{
         display: grid;
         grid-template-columns: 1fr;   
@@ -172,5 +174,20 @@ p {
     }
     .img-stats p{
         margin: 1rem 1rem;
+    }
+}
+
+@media (max-width : 360px){
+    #newherobutton, #searchbar, #searchButton{
+        width: 70vw;
+        font-size: 4vw;
+    }
+
+    #heroname{
+        font-size: 8vw;
+    }
+
+    .img-stats p{
+        font-size: 4vw;
     }
 }
