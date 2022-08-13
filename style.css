@@ -10,15 +10,27 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.randomcontainer{
+    margin: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .img-stats{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     text-align: left;
+    width: auto;
+    margin: 1rem 0 0rem;
+    padding: 0 2rem 2rem;
+    background-color: rgb(133, 175, 48);
 }
 
 .img-stats p{
-    margin: 2.5rem 0;
+    margin: 2.5rem 2rem;
     color: darkblue;
     font-weight: bold;
     text-shadow: 1px 1px 15px darkgreen;
@@ -48,6 +60,7 @@ body {
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
+    justify-self: center;
 }
 
 p {
@@ -64,18 +77,21 @@ p {
 }
 
 #newherobutton {
+    box-sizing: border-box;
     display: block;
-    font-family: Arial, Helvetica, sans-serif;
-    width: 20vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+    width: 250px;
     height: 2.5rem;
     border: 2px dashed rgb(154, 192, 79);
     background-color: rgb(33, 41, 17);
     color: #fff;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: bolder;
     transition: .7s;
     box-shadow: 0px 2px 5px black;
     cursor: pointer;
+    justify-self: center;
 }
 
 #newherobutton:hover {
@@ -87,31 +103,74 @@ p {
 }
 
 .searchcontainer {
-    margin: 1.2rem;
+    width: auto;
+    height: auto;
+    margin: 1.2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #searchbar {
+    height: 2.4rem;
     width: 250px;
-    height: 2.1rem;
+    box-sizing: border-box;
     border: 1px solid black;
+    outline: none;
     background-color: rgb(172, 196, 124);
     color: black;
     box-shadow: 0px 2px 5px black;
     text-align: center;
     cursor: pointer;
+    justify-self: center;
+}
+
+#searchbar:hover{
+    background-color: rgb(133, 156, 86);
 }
 
 #searchButton {
+    display: block;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: .2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 4px;
+    margin: .3rem;
     height: 2.4rem;
-    width: 70px;
+    width: 250px;
     background-color: rgb(33, 41, 17);
     color: #fff;
-    text-transform: capitalize;
+    text-transform: uppercase;
     font-weight: bolder;
     box-shadow: 0px 2px 5px black;
-    transition: 0.5s;
     cursor: pointer;
+    border: none;
+    justify-self: center;
+}
+
+#searchButton:hover{
+    background-color: rgb(60, 75, 32);
+}
+
+@media (max-width : 570px) {
+    .img-stats{
+        display: grid;
+        grid-template-columns: 1fr;   
+    }   
+    
+    #heroimage {
+        margin: 0 2rem;
+        justify-self: center;
+        align-self: center;
+        width: 70vw;
+    }
+    #stats {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .img-stats p{
+        margin: 1rem 1rem;
+    }
 }
