@@ -32,7 +32,7 @@ const searchHero = (search) => {
 const getStats = (char) => {
     const statNames = Object.keys(char.powerstats)
         .map(stat =>
-            `<p>${stat.toUpperCase()}: ${char.powerstats[stat]}.</p>`
+            `<p>${char.powerstats[stat]}<br><span>${stat.toUpperCase()}</span></p>`
         )
         .join('')
     return statNames
