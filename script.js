@@ -14,7 +14,7 @@ const getRandomHero = (id) => {
         })
 }
 
-const searchButton = document.getElementById('searchButton')
+const shearchButton = document.getElementById('searchButton')
 const searchBar = document.getElementById('searchbar')
 const searchHero = (search) => {
     fetch(`https://superheroapi.com/api.php/110151828463508/search/${search}`)
@@ -36,6 +36,23 @@ const getStats = (char) => {
         )
         .join('')
     return statNames
+}
+const toggleMode = () =>{
+    const cardbody = document.querySelector(`.cardbody`)
+    const heroname = document.getElementById(`heroname`)
+    const buttons = Array.from(document.querySelectorAll(`button`))
+    const changemode = document.querySelector(`.changemod`)
+    
+    document.body.classList.toggle(`darkModebody`)
+    searchBar.classList.toggle(`darkModesearchbar`)
+    cardbody.classList.toggle(`darkModecardbody`)
+    heroname.classList.toggle(`darkModeheroname`)
+    buttons.forEach(button =>{
+        button.classList.toggle(`darkModeButton`)
+    })
+
+    changemode.innerHTML == `Darkmode` ? changemode.innerHTML = `Lightmode` : changemode.innerHTML = `Darkmode`
+    
 }
 
 button.onclick = () => {
