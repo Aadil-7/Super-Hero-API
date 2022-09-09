@@ -251,3 +251,145 @@ body {
     transition: .7s;
     -webkit-text-stroke: 1px black;
 }
+
+@media (max-width: 1355px){
+    body{
+        flex-direction: column;
+    }
+
+    .cardbody{
+        width: 40vw;
+    }
+
+    .cardbody:hover{
+        margin-top: 10vh;
+    }
+
+    .randomcontainer{
+        width: 70vw;
+    }
+    .searchcontainer{
+        width: 70vw;
+    }
+}
+
+@media (max-width: 1050px){
+    .stats p{
+        font-size: 1.5rem;
+    }
+    .img-box{
+        top: -40px;
+        width: 170px;
+        height: 150px;
+    }
+
+    .cardbody:hover .img-box{
+        width: 250px;
+        height: 300px;
+    }
+
+    .content{
+        transform: translateY(-20px);
+    }
+    .cardbody{
+        height: 200px;
+        width: 400px;
+    }
+
+    .cardbody:hover{
+        height: 495px;
+    }
+
+    .cardbody:hover .box{
+        height: 400px;
+        transform: translateY(130px);
+    }
+}
+
+@media (max-width: 870px){
+    .cardbody{
+        width: 350px;
+    }
+    .img-box{
+        width: 150px;
+    }
+    .cardbody:hover .img-box{
+        width: 180px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 440px){
+    body{
+        gap: 2.5rem;
+    }
+
+    .cardbody{
+        height: 170px;
+    }
+    .cardbody .box{
+        height: 65%;
+        transform: translateY(120px);
+    }
+
+    .cardbody:hover{
+        height:54vh ;
+    }
+    .cardbody:hover .box{
+        height: 65%;
+        transform: translateY(50px);
+    }
+    .cardbody:hover .content {
+        transform: translateY(70px);
+        height: 30vh;
+    }
+
+    .stats p {
+        text-align: center;
+        margin: .5rem 1rem 0;
+    }
+
+    .content{
+        transform: translateY(-15px);
+        height: 80px;
+        width: 80%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .cardbody:hover .content{
+        height: 32vh;
+        overflow: hidden;
+    }
+
+    .cardbody:hover .box{
+        transform: translateY(120px);
+    }
+}
+
+@media (max-width: 400px){
+    .cardbody,.searchbar,.searchButton,.newherobutton, .cardbody:hover{
+        width:85vw ;
+    }
+    .cardbody{
+        height: 190px;
+    }
+    .cardbody:hover .content{
+        height: 500px;
+        overflow: hidden;
+    }
+
+    .cardbody:hover{
+        height: 460px;
+    }
+    .stats {
+        width: 100%;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        column-gap: auto;
+    }
+
+    .stats p{
+        margin: 0;
+    }
+}
