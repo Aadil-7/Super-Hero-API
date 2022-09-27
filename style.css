@@ -196,8 +196,12 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     transition: 0.5s;
+    color: transparent;
 }
 
+.cardbody:hover .stats {
+    color: #000;
+}
 
 .stats p {
     font-size: 2rem;
