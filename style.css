@@ -196,11 +196,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     transition: 0.5s;
-    color: transparent;
+    opacity: 0;
 }
 
 .cardbody:hover .stats {
-    color: #000;
+   opacity : 1;
 }
 
 .stats p {
