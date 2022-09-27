@@ -184,7 +184,7 @@ body {
 }
 
 .cardbody:hover .content {
-    transform: translateY(110px);
+    transform: translateY(130px);
 }
 
 .cardbody:hover .heroname{
@@ -211,6 +211,10 @@ body {
 .stats p span {
     font-size: 15px;
     opacity: .5;
+}
+
+footer{
+    padding: 10px 0px;
 }
 
 .darkModebody{
