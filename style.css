@@ -165,7 +165,7 @@ body {
 
 .cardbody:hover .box{
     height: 65%;
-    transform: translateY(160px);
+    transform: translateY(180px);
 }
 
 .content {
