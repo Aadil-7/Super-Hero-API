@@ -155,7 +155,7 @@ body {
     width: 100%;
     height: 30%;
     top: 0;
-    transform: translateY(120px);
+    transform: translateY(130px);
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
@@ -214,6 +214,11 @@ body {
 }
 
 footer{
+    width: 100vw;
+    text-align: center ;
+    position: absolute;
+    bottom: 0;
+    left: 0;
     padding: 10px 0px;
 }
 
@@ -274,11 +279,11 @@ footer{
         margin-top: 10vh;
     }
 
-    .randomcontainer{
+    .randomcontainer,.searchcontainer{
         width: 70vw;
     }
-    .searchcontainer{
-        width: 70vw;
+    .newherobutton{
+        margin-bottom: 40px;
     }
 }
 
@@ -311,7 +316,7 @@ footer{
 
     .cardbody:hover .box{
         height: 400px;
-        transform: translateY(130px);
+        transform: translateY(10 0px);
     }
 }
 
@@ -338,7 +343,7 @@ footer{
     }
     .cardbody .box{
         height: 65%;
-        transform: translateY(120px);
+        transform: translateY(130px);
     }
 
     .cardbody:hover{
@@ -346,10 +351,10 @@ footer{
     }
     .cardbody:hover .box{
         height: 65%;
-        transform: translateY(50px);
+        transform: translateY(120px);
     }
     .cardbody:hover .content {
-        transform: translateY(70px);
+        transform: translateY(90px);
         height: 30vh;
     }
 
@@ -371,9 +376,6 @@ footer{
         overflow: hidden;
     }
 
-    .cardbody:hover .box{
-        transform: translateY(120px);
-    }
 }
 
 @media (max-width: 400px){
