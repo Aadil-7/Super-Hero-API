@@ -11,7 +11,11 @@ const getRandomHero = (id) => {
             const name = document.getElementById(`heroname`)
             name.innerText = json.name
             statsDiv.innerHTML = getStats(json);
+            document.getElementById(`errMessage`).classList.remove(`displayBlock`)
         })
+        .catch(
+            document.getElementById(`errMessage`).classList.add(`displayBlock`)
+        )
 }
 
 const shearchButton = document.getElementById('searchButton')
@@ -26,7 +30,11 @@ const searchHero = (search) => {
             const name = document.getElementById(`heroname`)
             name.innerText = hero.name
             statsDiv.innerHTML = getStats(hero);
+            document.getElementById(`errMessage`).classList.remove(`displayBlock`)
         })
+        .catch(
+            document.getElementById(`errMessage`).classList.add(`displayBlock`)
+        )
 }
 
 const getStats = (char) => {
@@ -37,22 +45,20 @@ const getStats = (char) => {
         .join('')
     return statNames
 }
-const toggleMode = () =>{
+const toggleMode = () => {
     const cardbody = document.querySelector(`.cardbody`)
     const heroname = document.getElementById(`heroname`)
     const buttons = Array.from(document.querySelectorAll(`button`))
     const changemode = document.querySelector(`.changemod`)
-    
+
     document.body.classList.toggle(`darkModebody`)
     searchBar.classList.toggle(`darkModesearchbar`)
     cardbody.classList.toggle(`darkModecardbody`)
     heroname.classList.toggle(`darkModeheroname`)
-    buttons.forEach(button =>{
+    buttons.forEach(button => {
         button.classList.toggle(`darkModeButton`)
     })
-
     changemode.innerHTML == `Darkmode` ? changemode.innerHTML = `Lightmode` : changemode.innerHTML = `Darkmode`
-    
 }
 
 button.onclick = () => {

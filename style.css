@@ -213,6 +213,17 @@ body {
     opacity: .5;
 }
 
+#errMessage{
+    display: none;
+    transition: .5s;
+    text-shadow: 0 1px 10px gray;
+}
+
+.displayBlock{
+    display: block !important;
+    transition: .5s;
+}
+
 footer{
     width: 100vw;
     text-align: center ;
