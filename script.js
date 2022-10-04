@@ -14,7 +14,7 @@ const getRandomHero = (id) => {
             document.getElementById(`errMessage`).classList.remove(`displayBlock`)
         })
         .catch(
-            document.getElementById(`errMessage`).classList.add(`displayBlock`)
+           setTimeout(()=>{document.getElementById(`errMessage`).classList.add(`displayBlock`)}, 1000*4)
         )
 }
 
@@ -33,7 +33,7 @@ const searchHero = (search) => {
             document.getElementById(`errMessage`).classList.remove(`displayBlock`)
         })
         .catch(
-            document.getElementById(`errMessage`).classList.add(`displayBlock`)
+            setTimeout(()=>{document.getElementById(`errMessage`).classList.add(`displayBlock`)}, 1000*4)
         )
 }
 
