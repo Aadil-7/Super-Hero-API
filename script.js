@@ -13,9 +13,9 @@ const getRandomHero = (id) => {
             statsDiv.innerHTML = getStats(json);
             document.getElementById(`errMessage`).classList.remove(`displayBlock`)
         })
-        .catch(
+        .catch(()=>{
            setTimeout(()=>{document.getElementById(`errMessage`).classList.add(`displayBlock`)}, 1000*4)
-        )
+        })
 }
 
 const shearchButton = document.getElementById('searchButton')
@@ -32,9 +32,9 @@ const searchHero = (search) => {
             statsDiv.innerHTML = getStats(hero);
             document.getElementById(`errMessage`).classList.remove(`displayBlock`)
         })
-        .catch(
+        .catch(()=>{
             setTimeout(()=>{document.getElementById(`errMessage`).classList.add(`displayBlock`)}, 1000*4)
-        )
+        })
 }
 
 const getStats = (char) => {
